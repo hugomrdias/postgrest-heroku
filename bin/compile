@@ -83,7 +83,7 @@ fi
 if ver_below_6; then
   FILE_SUFFIX="ubuntu"
 else
-  FILE_SUFFIX="linux-x64-static"
+  FILE_SUFFIX="linux-static-x64"
 fi
 
 if [ ! -e $CACHE_DIR/$BIN ]; then
