@@ -42,4 +42,9 @@ done
 echo "server-host=\"0.0.0.0\"" >> $CONF_PATH
 echo "server-port=${PORT}" >> $CONF_PATH
 
+# Get DATABASE_URL explicitly, as it is populated by Heroku automatically
+if [ "$DATABASE_URL" ]; then
+  echo "db-uri=\"${DATABASE_URL}\"" >> $CONF_PATH
+fi
+
 exec "$@"
